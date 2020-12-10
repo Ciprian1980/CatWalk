@@ -1,4 +1,8 @@
-import ProductInformation from './productInformation'
+import SelectedStyles from "./selectedStyle";
+import AddToCart from "./addToCart";
+import ProductInformation from "./productInformation";
+import MyCarousel from "./customCarousel";
+import VerticalCarousel from "./verticalCarousal";
 function ProductOverview(props) {
     // contains the following components
     /*
@@ -10,30 +14,66 @@ function ProductOverview(props) {
 
     const mainContainerStyle = {
         display: "flex",
-        flex: "2 1",
-        width: "80%",
-        margin :"84px 10%",
-        backgroundColor:"grey",
+        flex: "3 1",
+        width: "100%",
+        backgroundColor: "#ebebeb",
         justifyContent: "space-evenly",
     };
 
-    const containerStyle =  {
-        display:"flex",
-        flexDirection:"column",
-        justifyContent:"space-evenly"
-    }
+    const containerStyle = {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-evenly",
+    };
 
-    
+    const gallery_style = {
+        backgroundColor: "red",
+        width: "75%",
+        height: "800px",
+        display: "flex",
+        flexDirection:"row"
+    };
+
     return (
         <div className="productOverView" style={mainContainerStyle}>
-            <div className="imageGallery" style={{backgroundColor:"red", width:"60%" ,height:"800px"}}>
-                <h1>Image Gallery</h1>
+            <div
+                className="imageGallery"
+                style={gallery_style}
+            >
+                <div
+                    className="left_gallery"
+                    style={{
+                        width: "30%",
+                        height: "100%",
+                        backgroundColor: "#ebebeb",
+                        textAlign:"center"
+                    }}
+                >
+                    <VerticalCarousel />
+                </div>
+                <div
+                    className="right_gallery"
+                    style={{
+                        width: "70%",
+                        backgroundColor:"#ebebeb"
+                    }}
+                >
+                    <MyCarousel />
+                </div>
             </div>
-            <div className="productDetails" style={{backgroundColor:"yellow",padding:"15px",width:"40%", height:"800px"}}>
+            <div
+                className="productDetails"
+                style={{
+                    backgroundColor: "white",
+                    padding: "15px",
+                    width: "40%",
+                    height: "800px",
+                }}
+            >
                 <div className="container" style={containerStyle}>
-                    <ProductInformation/>
-                    <h1>Style Selector</h1>     
-                    <h1>Add to Cart</h1>     
+                    <ProductInformation />
+                    <SelectedStyles />
+                    <AddToCart />
                 </div>
             </div>
         </div>

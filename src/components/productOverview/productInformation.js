@@ -12,28 +12,28 @@ function ProductInformation(props) {
     const testObj = {
         averageRating: 4.5,
         category: "clothing",
-        name: "Winter Jacket",
+        name: "Expanded Product Name",
         price: 269,
     };
 
     const { averageRating, category, name, price } = testObj;
 
     return (
-        <div style={{ backgroundColor: "orange", padding: "10px" }}>
-            <div>
+        <div style={{ backgroundColor: "white", padding: "10px" }}>
+            <div style={{display:"inline-flex", alignItems:"center"}}>
                 <StarIcon />
                 <StarIcon />
                 <StarIcon />
                 <StarIcon />
 
-                <p style={{ display: "inline", textDecoration: "underline" }}>
+                <a href="www.google.com" style={{ margin:"0 10px",fontSize:"24px",color:"grey", textDecoration: "underline" }}>
                     {" "}
-                    read all reviews
-                </p>
+                    Read all reviews
+                </a>
             </div>
-            <h1>{category}</h1>
+            <h2 style={{color:"grey" }}>CATEGORY</h2>
             <h1>{name}</h1>
-            <h1>{`${price}`}</h1>
+            <h2 style={{color:"grey"}}>&#36;{price}</h2>
         </div>
     );
 }
