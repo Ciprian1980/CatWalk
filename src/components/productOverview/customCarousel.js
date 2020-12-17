@@ -6,6 +6,7 @@ import img4 from "../../assets/4.jpg";
 import img5 from "../../assets/5.jpg";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+
 export default function MyCarousel() {
     let data = [img1, img2, img3, img4, img5];
 

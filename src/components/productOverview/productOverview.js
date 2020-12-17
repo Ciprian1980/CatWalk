@@ -31,31 +31,18 @@ function ProductOverview(props) {
         width: "75%",
         height: "800px",
         display: "flex",
-        flexDirection:"row"
+        flexDirection: "row",
     };
 
     return (
         <div className="productOverView" style={mainContainerStyle}>
-            <div
-                className="imageGallery"
-                style={gallery_style}
-            >
-                <div
-                    className="left_gallery"
-                    style={{
-                        width: "30%",
-                        height: "100%",
-                        backgroundColor: "#ebebeb",
-                        textAlign:"center"
-                    }}
-                >
-                    <VerticalCarousel />
-                </div>
+            <div className="imageGallery" style={gallery_style}>
+                <VerticalCarousel />
                 <div
                     className="right_gallery"
                     style={{
                         width: "70%",
-                        backgroundColor:"#ebebeb"
+                        backgroundColor: "#ebebeb",
                     }}
                 >
                     <MyCarousel />
